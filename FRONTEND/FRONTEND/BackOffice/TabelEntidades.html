@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PM- Entidades</title>
+    <link rel="icon" type="imagem/png" href="img/logo (6).png" />
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
+
+    <!-- Custom styles for this page -->
+    <link rel="stylesheet" type="text/css" href="vendor/datatables/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"> </script>
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <img src="img\logo_sidebar0.png">
+                </div>
+                <div class="sidebar-brand-text mx-3">Polícia Marítima</div>
+            </a>
+            <br>
+
+            <br>
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!--Menu Operacionais-->
+            <li class="nav-item">
+                <a class="nav-link " href="TabelOperacionais.html">
+                    <i class="far fa-copy"></i>
+                    <span>Operacionais</span>
+                </a>
+
+            </li>
+
+
+
+            <!--Menu entidades-->
+            <li class="nav-item">
+                <a class="nav-link " href="TabelEntidades.html">
+                    <i class="far fa-copy"></i>
+                    <span>Entidades</span>
+                </a>
+
+            </li>
+
+            <!--  Menu Pedidos-->
+            <li class="nav-item">
+                <a class="nav-link " href="TabelPedidosAjuda.html">
+                    <i class="far fa-copy"></i>
+                    <span>Pedidos</span>
+                </a>
+
+            </li>
+
+
+            <!-- Menu Serviços -->
+            <li class="nav-item">
+                <a class="nav-link" href="registarServiço.html">
+                    <i class="fas fa-folder-plus"></i>
+                    <span>Registar Serviço</span></a>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour"
+                    aria-expanded="true" aria-controls="collapseFour">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Ocorrências</span>
+                </a>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="gerirOcorrências.html">Gerir Ocorrências</a>
+                        <a class="collapse-item" href="gerirLocalizações.html">Gerir Localizações</a>
+                    </div>
+                </div>
+            </li>
+            <br>
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <div class="nav-center">
+                        <a class="mr-2 d-none d-lg-inline text-gray-600" id="relogio"></a>
+                    </div>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="nomeUser" class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                                <i class="fas fa-user"></i>
+                            </a>
+                             <!--Dropdown - User Information-->
+                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                             aria-labelledby="userDropdown">
+                             <a id="btnPerfil" class="dropdown-item" href="dadosPerfil.html">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Perfil
+                            </a>
+                             <div class="dropdown-divider"></div>
+                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                 Logout
+                             </a>
+                         </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+
+                <div class="container-fluid">
+                    <div class="card-body card shadow mb-4">
+                        <div>
+                            <div>
+                                <h4 class="text-primary">
+                                    Lista das Entidades
+                                </h4>
+                                <!--Tabela-->
+                                <div class="table-responsive">
+
+                                    <table class="table table-hover display" id="dataTable" width="100%"></table>
+                                    <!-- <table class="table table-bordered table-hover display" id="dataTable" width="100%"" cellspacing="0">
+                                        <thead>
+                                      
+                                    </table> -->
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h4 class="text-primary">
+                                    Gestão das Entidades
+                                </h4>
+                                <a class="butn btn-outline-principal" id="toogle1">Registar</a>
+                                <a class="butn btn-outline-cuidado" id="toogle2">Alterar</a>
+                                <a id="btnconfirmar" class="butn btn-outline-aviso">Eliminar</a>
+                                <a class="butn" id="toogle4"><span aria-hidden="true">&times;</span></a>
+                            </div>
+                        </div>
+
+                        <div class="sect" id="section_1">
+                            <br>
+                            <div class="modal-content">
+                                <div class="p-4">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4"><strong>Registar Entidade</strong></h1>
+                                        <hr>
+                                        <br>
+                                    </div>
+                                    <form id="formNewEntidade" name="formNewEntidade" action="">
+
+                                        <div class="form-group blue-border">
+                                            <label for="nome">Nome:</label>
+                                            <input type="text" class="form-control" id="nome" placeholder="" name="nome"
+                                                required>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="distrito">Distrito</label>
+                                                <!--<input type="text" class="form-control" id="distrito"
+                                                placeholder="Ex.: Porto" name="distrito" data-rule="required|distrito" required>-->
+                                                <select id="district" class="form-control" name="district"
+                                                    data-rule="required|district" onchange="random()">
+                                                    <option value=""> --- </option>
+                                                    <option value="Aveiro"> Aveiro</option>
+                                                    <option value="Beja"> Beja</option>
+                                                    <option value="Braga"> Braga</option>
+                                                    <option value="Bragança"> Bragança</option>
+                                                    <option value="Castelo Branco"> Castelo Branco</option>
+                                                    <option value="Coimbra"> Coimbra</option>
+                                                    <option value="Évora"> Évora</option>
+                                                    <option value="Faro"> Faro</option>
+                                                    <option value="Guarda"> Guarda</option>
+                                                    <option value="Leiria"> Leiria</option>
+                                                    <option value="Lisboa"> Lisboa</option>
+                                                    <option value="Portalegre"> Portalegre</option>
+                                                    <option value="Porto"> Porto</option>
+                                                    <option value="Santarém"> Santarém</option>
+                                                    <option value="Setúbal"> Setúbal</option>
+                                                    <option value="Viana do Castelo"> Viana do Castelo</option>
+                                                    <option value="Vila Real"> Vila Real</option>
+                                                    <option value="Viseu"> Viseu</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="concelho">Concelho</label>
+                                                <select id="locations" class="form-control" name="concelho"
+                                                data-rule="required|concelho"></select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group blue-border">
+                                            <label for="morada">Morada:</label>
+                                            <input type="text" class="form-control" id="morada_registar" name="morada_registar"
+                                                data-rule="required|morada" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="tipo">Tipo:</label>
+                                            <select class="form-control" name="tipo" id="tipo" data-rule="required|tipo"
+                                                required>
+                                                <option value="pública"> pública </option>
+                                                <option value="privada"> privada </option>
+                                            </select>
+                                        </div>
+                                </div>
+
+                                <div class="container text-center">
+                                    <button id="submeterEntidade" type="button" class="btn-sumbithelp"
+                                        style="margin-left: 22px;">Submeter</button>
+                                    <button type="reset" class="btn-sumbithelp">Repor</button>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+
+                        <div class="sect" id="section_2">
+                            <br>
+                            <div class="modal-content">
+                                <div class="p-4">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4"><strong>Alterar Entidade</strong></h1>
+                                        <hr>
+                                        <br>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="id" class="control-label">ID:</label>
+                                        <input type="number" class="form-control" id="id_entidade" name="id"
+                                            data-rule="required|id" disabled>
+                                    </div>
+                                    <hr>
+
+                                    <form id="formAlterarEntidadeAjuda" name="formAlterarEntidadeAjuda" action="">
+
+                                        <div class="form-group blue-border">
+                                            <label for="nome">Nome:</label>
+                                            <input type="text" class="form-control" id="nome_alterar" placeholder="" name="nome"
+                                                 required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="validationCustom03">Tipo:</label>
+                                            <select id= "tipo_alterar" class="form-control" name="Tipo:">
+                                                <option value="pública"> pública </option>
+                                                <option value="privada"> privada </option>
+                                            </select>
+                                        </div>
+                                </div>
+
+                                <div class="container text-center">
+                                    <button id="alterarEntidade" type="button"class="btn-sumbithelp"
+                                        style="margin-left: 22px;">Submeter</button>
+                                        <button type="button" id="Cancelar" class="btn-sumbithelp">Cancelar</button>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+
+                        <div class="sect" id="section_3">
+                            <br>
+                        </div>
+
+                        <div class="sect" id="section_4">
+                            <!--vazia
+                            Não mexer-->
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+            
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Um Serviço Secure4All</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Deseja mesmo sair?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Selecione "Sair" se estiver pronto para encerrar a sua sessão.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="../FrontOffice/index.html">Sair</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+    <!--
+     Page level plugins 
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+     Page level custom scripts -->
+    <!-- <script src="js/demo/datatables-demo.js"></script> -->
+
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+    <!-- controller -->
+    <script src="./Controller/entidades.controller.js"></script>
+
+    <!--RELÓGIO-->
+    <script>
+
+        function relogio() {
+            var data = new Date();
+            var hor = data.getHours();
+            var min = data.getMinutes();
+            var seg = data.getSeconds();
+
+            if (hor < 10) {
+                hor = "0" + hor;
+            }
+            if (min < 10) {
+                min = "0" + min;
+            }
+            if (seg < 10) {
+                seg = "0" + seg;
+            }
+
+            var horas = hor + ":" + min + ":" + seg;
+
+            document.getElementById("relogio").innerHTML = horas;
+        }
+
+        window.setInterval("relogio()", 1000);
+
+    </script>
+
+<script>
+    function random() {
+    
+        var a= document.getElementById('district').value;
+ 
+        //console.log(a);
+        //console.log(b);
+    
+        var visibleId = $('.sect:visible').prop('id');
+        //console.log(visibleId);
+    
+        if (visibleId == 'section_1') {
+            if (a=== 'Aveiro') {
+        
+        var array= ["Águeda", "Albergaria-a-Velha", "Anadia", "Arouca", "Aveiro", "Castelo de Paiva", "Espinho", "Estarreja", "Ílhavo", "Mealhada", "Murtosa", "Oliveira de Azeméis", "Oliveira do Bairro", "Ovar", "Santa Maria da Feira", "São João da Madeira", "Sever do Vouga", "Vagos", "Vale de Cambra"];
+    
+    }
+    
+    else if (a=== 'Beja'){
+        var array= ["Aljustrel", "Almodôvar", "Alvito",  "Aljustrel", "Almodôvar", "Alvito", "Barrancos", "Beja", "Castro Verde","Cuba", "Ferreira do Alentejo", "Mértola",  "Moura", "Odemira", "Ourique", "Serpa", "Vidigueira"];
+          
+    }
+    
+    else if (a=== 'Braga'){
+        var array= ["Amares", "Barcelos", "Braga", "Cabeceiras de Basto", "Celorico de Basto",  "Esposende", "Fafe", "Guimarães", "Póvoa de Lanhoso", "Terras de Bouro", "Vieira do Minho", "Vila Nova de Famalicão", "Vila Verde", "Vizela"];
+    
+    }
+    
+    else if (a=== 'Bragança'){
+    
+        var array= ["Alfandega da Fé", "Bragança", "Carrazeda de Ansiães", "Freixo Espada à Cinta", "Macedo de Cavaleiros",  "Miranda do Douro", "Mirandela", "Mogadouro", "Torre de Moncorvo", "Vila Flor", "Vimioso", "Vinhais"];
+    }
+    
+    else if (a=== 'Castelo Branco'){
+    
+    var array= ["Belmonte", "Castelo Branco", "Covilhã", "Fundão", "Idanha-a-Nova",  "Oleiros", "Penamacor", "Penhas Saúde", "Proença-a-Nova", "Sertã", "Vila de Rei", "Vila Velha de Rodão"];
+    
+    }
+    
+    else if (a=== 'Coimbra'){
+    
+    var array= ["Arganil", "Cantanhede", "Coimbra", "Condeixa-a-Nova", "Figueira da Foz",  "Góis", "Lousã", "Mira", "Miranda do Corvo", "Montemor-o-Velho", "Oliveira do Hospital", "Pampilhosa da Serra", "Penela", "Soure",  "Tábua", "Vila Nova de Poiares"];
+    }
+    
+    else if (a=== 'Évora'){
+    
+    var array= ["Alandroal", "Arraiolos", "Borba", "Estremoz", "Évora",  "Montemor-o-Novo", "Mora", "Mourão", "Portel", "Redondo", "Reguengos de Monsaraz", "Vendas Novas", "Viana do Alentejo", "Vila Viçosa"];
+    
+    }
+    
+    else if (a=== 'Faro'){
+    
+    var array= ["Albufeira", "Alcoutim", "Aljezur", "Castro Marim", "Faro",  "Lagoa", "Lagos", "Loulé", "Monchique", "Olhão", "Portimão", "Sagres", "São Brás de Alportel", "Silves", "Tavira", "Vila do Bispo", "Vila Real de Santo António"];
+    
+    }
+    
+    else if (a=== 'Guarda'){
+    
+    var array= ["Aguiar da Beira", "Almeida", "Celorico da Beira", "Figueira de Castelo Rodrigo", "Fornos de Algodres",  "Gouveia", "Guarda", "Manteigas", "Mêda", "Penhas Douradas", "Pinhel", "Sabugal", "Seia", "Trancoso", "Vila Nova de Foz Coa"];
+    
+    
+    }
+    
+    else if (a=== 'Leiria'){
+    
+    var array= ["Alcobaça", "Alvaiázere", "Ansião", "Batalha", "Bombarral",  "Caldas da Rainha", "Castanheira de Pêra", "Figueiró dos Vinhos", "Leiria", "Marinha Grande", "Nazaré", "Óbidos", "Pedrógão Grande", "Peniche", "Pombal", "Porto de Mós"];
+    
+    
+    }
+    
+    else if (a=== 'Lisboa'){
+    
+    var array= ["Alenquer", "Amadora", "Arruda dos Vinhos", "Azambuja", "Cadaval",  "Cascais", "Lisboa", "Loures", "Lourinhã", "Mafra", "Odivelas", "Oeiras", "Sintra", "Sobral de Monte Agraço", "Torres Vedras", "Vila Franca de Xira"];
+    
+    }
+    
+    else if (a=== 'Portalegre'){
+    
+    var array= ["Alter do Chão", "Arronches", "Avis", "Campo Maior", "Castelo de Vide",  "Crato", "Elvas", "Fronteira", "Gavião", "Marvão", "Monforte", "Nisa", "Ponte de Sor", "Portalegre", "Sousel"];
+    
+    }
+    
+    else if (a=== 'Porto'){
+    
+    var array= ["Amarante", "Baião","Felgueiras", "Gondomar", "Lousada", "Maia",  "Marco de Canaveses", "Matosinhos", "Paços de Ferreira", "Paredes", "Penafiel", "Porto", "Póvoa de Varzim", "Santo Tirso", "Trofa", "Valongo", "Vila do Conde", "Vila Nova de Gaia"];
+    
+    }
+    
+    else if (a=== 'Santarém'){
+    
+    var array= ["Abrantes", "Alcanena", "Almeirim", "Alpiarça", "Benavente",  "Cartaxo", "Chamusca", "Constância", "Coruche", "Entroncamento", "Ferreira do Zêzere", "Golegã", "Mação", "Ourém", "Rio Maior", "Salvaterra de Magos", "Santarém", "Sardoal",  "Tomar", "Torres Novas", "Vila Nova da Barquinha"];
+    
+    }
+    
+    else if (a=== 'Setúbal'){
+    
+    var array= ["Alcácer do Sal", "Alcochete", "Almada", "Barreiro", "Grândola",  "Moita", "Palmela", "Santiago do Cacém", "Seixal", "Sesimbra", "Setúbal", "Sines"];
+    
+    }
+    
+    else if (a=== 'Viana do Castelo'){
+    
+    var array= ["Arcos de Valdevez", "Caminha", "Melgaço", "Monção", "Paredes de Coura",  "Ponte de Barca", "Ponte de Lima", "Valença", "Viana do Castelo", "Vila Nova de Cerveira"];
+    
+    }
+    
+    else if (a=== 'Vila Real'){
+    
+    var array= ["Alijó", "Boticas", "Chaves", "Mesão Frio", "Mondim de Basto",  "Montalegre", "Murça", "Peso da Régua", "Ribeira de Pena", "Sabrosa", "Santa Marta de Penaguião", "Valpaços", "Vila Pouca de Aguiar", "Vila Real"];
+    
+    }
+    
+    else if (a=== 'Viseu'){
+    
+    var array= ["Armamar", "Carregal do Sal", "Castro Daire", "Cinfães", "Lamego",  "Mangualde", "Mortágua", "Moimenta da Beira", "Nelas", "Oliveira de Frades", "Penalva do Castelo", "Penedono", "Resende", "Santa Comba Dão", "Sátão", "S. João da Pesqueira", "S. Pedro do Sul", "Sernancelhe", "Tabuaço", "Tarouca", "Tondela", "Vila Nova de Paiva", "Viseu", "Vouzela"];
+    
+    }
+    
+    else {
+        var array= [];
+    }
+    
+        }
+    
+        else {
+            if (b=== 'Aveiro') {
+        
+        var array= ["Águeda", "Albergaria-a-Velha", "Anadia", "Arouca", "Aveiro", "Castelo de Paiva", "Espinho", "Estarreja", "Ílhavo", "Mealhada", "Murtosa", "Oliveira de Azeméis", "Oliveira do Bairro", "Ovar", "Santa Maria da Feira", "São João da Madeira", "Sever do Vouga", "Vagos", "Vale de Cambra"];
+    
+    }
+    
+    else if (b=== 'Beja'){
+        var array= ["Aljustrel", "Almodôvar", "Alvito",  "Aljustrel", "Almodôvar", "Alvito", "Barrancos", "Beja", "Castro Verde","Cuba", "Ferreira do Alentejo", "Mértola",  "Moura", "Odemira", "Ourique", "Serpa", "Vidigueira"];
+          
+    }
+    
+    else if (b=== 'Braga'){
+        var array= ["Amares", "Barcelos", "Braga", "Cabeceiras de Basto", "Celorico de Basto",  "Esposende", "Fafe", "Guimarães", "Póvoa de Lanhoso", "Terras de Bouro", "Vieira do Minho", "Vila Nova de Famalicão", "Vila Verde", "Vizela"];
+    
+    }
+    
+    else if (b=== 'Bragança'){
+    
+        var array= ["Alfandega da Fé", "Bragança", "Carrazeda de Ansiães", "Freixo Espada à Cinta", "Macedo de Cavaleiros",  "Miranda do Douro", "Mirandela", "Mogadouro", "Torre de Moncorvo", "Vila Flor", "Vimioso", "Vinhais"];
+    }
+    
+    else if (b=== 'Castelo Branco'){
+    
+    var array= ["Belmonte", "Castelo Branco", "Covilhã", "Fundão", "Idanha-a-Nova",  "Oleiros", "Penamacor", "Penhas Saúde", "Proença-a-Nova", "Sertã", "Vila de Rei", "Vila Velha de Rodão"];
+    
+    }
+    
+    else if (b=== 'Coimbra'){
+    
+    var array= ["Arganil", "Cantanhede", "Coimbra", "Condeixa-a-Nova", "Figueira da Foz",  "Góis", "Lousã", "Mira", "Miranda do Corvo", "Montemor-o-Velho", "Oliveira do Hospital", "Pampilhosa da Serra", "Penela", "Soure",  "Tábua", "Vila Nova de Poiares"];
+    }
+    
+    else if (b=== 'Évora'){
+    
+    var array= ["Alandroal", "Arraiolos", "Borba", "Estremoz", "Évora",  "Montemor-o-Novo", "Mora", "Mourão", "Portel", "Redondo", "Reguengos de Monsaraz", "Vendas Novas", "Viana do Alentejo", "Vila Viçosa"];
+    
+    }
+    
+    else if (b=== 'Faro'){
+    
+    var array= ["Albufeira", "Alcoutim", "Aljezur", "Castro Marim", "Faro",  "Lagoa", "Lagos", "Loulé", "Monchique", "Olhão", "Portimão", "Sagres", "São Brás de Alportel", "Silves", "Tavira", "Vila do Bispo", "Vila Real de Santo António"];
+    
+    }
+    
+    else if (b=== 'Guarda'){
+    
+    var array= ["Aguiar da Beira", "Almeida", "Celorico da Beira", "Figueira de Castelo Rodrigo", "Fornos de Algodres",  "Gouveia", "Guarda", "Manteigas", "Mêda", "Penhas Douradas", "Pinhel", "Sabugal", "Seia", "Trancoso", "Vila Nova de Foz Coa"];
+    
+    
+    }
+    
+    else if (b=== 'Leiria'){
+    
+    var array= ["Alcobaça", "Alvaiázere", "Ansião", "Batalha", "Bombarral",  "Caldas da Rainha", "Castanheira de Pêra", "Figueiró dos Vinhos", "Leiria", "Marinha Grande", "Nazaré", "Óbidos", "Pedrógão Grande", "Peniche", "Pombal", "Porto de Mós"];
+    
+    
+    }
+    
+    else if (b=== 'Lisboa'){
+    
+    var array= ["Alenquer", "Amadora", "Arruda dos Vinhos", "Azambuja", "Cadaval",  "Cascais", "Lisboa", "Loures", "Lourinhã", "Mafra", "Odivelas", "Oeiras", "Sintra", "Sobral de Monte Agraço", "Torres Vedras", "Vila Franca de Xira"];
+    
+    }
+    
+    else if (b=== 'Portalegre'){
+    
+    var array= ["Alter do Chão", "Arronches", "Avis", "Campo Maior", "Castelo de Vide",  "Crato", "Elvas", "Fronteira", "Gavião", "Marvão", "Monforte", "Nisa", "Ponte de Sor", "Portalegre", "Sousel"];
+    
+    }
+    
+    else if (b=== 'Porto'){
+    
+    var array= ["Amarante", "Baião","Felgueiras" , "Gondomar", "Lousada", "Maia",  "Marco de Canaveses", "Matosinhos", "Paços de Ferreira", "Paredes", "Penafiel", "Porto", "Póvoa de Varzim", "Santo Tirso", "Trofa", "Valongo", "Vila do Conde", "Vila Nova de Gaia"];
+    
+    }
+    
+    else if (b=== 'Santarém'){
+    
+    var array= ["Abrantes", "Alcanena", "Almeirim", "Alpiarça", "Benavente",  "Cartaxo", "Chamusca", "Constância", "Coruche", "Entroncamento", "Ferreira do Zêzere", "Golegã", "Mação", "Ourém", "Rio Maior", "Salvaterra de Magos", "Santarém", "Sardoal",  "Tomar", "Torres Novas", "Vila Nova da Barquinha"];
+    
+    }
+    
+    else if (b=== 'Setúbal'){
+    
+    var array= ["Alcácer do Sal", "Alcochete", "Almada", "Barreiro", "Grândola",  "Moita", "Palmela", "Santiago do Cacém", "Seixal", "Sesimbra", "Setúbal", "Sines"];
+    
+    }
+    
+    else if (b=== 'Viana do Castelo'){
+    
+    var array= ["Arcos de Valdevez", "Caminha", "Melgaço", "Monção", "Paredes de Coura",  "Ponte de Barca", "Ponte de Lima", "Valença", "Viana do Castelo", "Vila Nova de Cerveira"];
+    
+    }
+    
+    else if (b=== 'Vila Real'){
+    
+    var array= ["Alijó", "Boticas", "Chaves", "Mesão Frio", "Mondim de Basto",  "Montalegre", "Murça", "Peso da Régua", "Ribeira de Pena", "Sabrosa", "Santa Marta de Penaguião", "Valpaços", "Vila Pouca de Aguiar", "Vila Real"];
+    
+    }
+    
+    else if (b=== 'Viseu'){
+    
+    var array= ["Armamar", "Carregal do Sal", "Castro Daire", "Cinfães", "Lamego",  "Mangualde", "Mortágua", "Moimenta da Beira", "Nelas", "Oliveira de Frades", "Penalva do Castelo", "Penedono", "Resende", "Santa Comba Dão", "Sátão", "S. João da Pesqueira", "S. Pedro do Sul", "Sernancelhe", "Tabuaço", "Tarouca", "Tondela", "Vila Nova de Paiva", "Viseu", "Vouzela"];
+    
+    }
+    
+    else {
+        var array= [];
+    }
+        }
+        
+        
+        var string="";
+        
+        for (i=0; i<array.length;i++) {
+            string= string + "<option>" + array[i]+"</option>";
+        }
+        
+        document.getElementById('locations').innerHTML=string;
+
+    
+        }
+    </script>
+
+</body>
+
+</html>

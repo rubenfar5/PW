@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Polícia Marítima</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/logo (6).png" type="text/css" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!--Charts-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Google Material Design Icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"> </script>
+  <!-- =======================================================
+    Theme Name: BizPage
+    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container-fluid">
+
+      <div id="logo" class="pull-left">
+        <!-- Inserir imagem Polícia Marítima-->
+        <h1>
+          <a href="#intro" class="scrollto">
+            <i class="material-icons">anchor</i>
+            Polícia Marítima
+          </a>
+        </h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!--<a href="#intro"><img src="img/logo (6).png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <!-- Mudar referências-->
+          <li class="menu-active"><a href="#intro">Ínicio</a></li>
+          <li><a href="#about">Sobre Nós</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#stats">Estatísticas</a></li>
+          <li><a href="#clients">Parceiros</a></li>
+          <li><a href="#team">Equipa</a></li>
+          <li><a href="#contact">Contactos</a></li>
+          <li><a class="btn-login" data-toggle="modal" data-target="#modalLoginForm">Login</a></li>
+        </ul>
+
+
+        <!-- Modal Login-->
+
+        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+
+            modal-content
+            <div class="modal-content">
+              <div class="p-4">
+                <div class="text-center">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip"
+                    title="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h1 class="h4 text-gray-900 mb-4"><strong>Login</strong></h1>
+                  <hr>
+                </div>
+<br>
+                <form class="user">
+                  <div class="form-group">
+                    <input type="username" class="form-control form-control-user" id="username" placeholder="Username">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control form-control-user" id="password" placeholder="Password">
+                  </div>
+
+                  <br>
+                  <div class="row justify-content-center">
+                    <div class="fomr-group text-center col-sm-4">
+                      <a id="btnLogin" class="btn-login" type="button">login</a>
+                    </div>
+                  </div>
+                  <br>
+                </form>
+
+                <div class="text-center">
+                  <a href="modalFpassword" class="small" data-toggle="modal" data-target="#modalFpassword">Esqueceu a
+                    sua Password?</a>
+                  <hr>
+                  <p>Um serviço Secure4All</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!--Fim Modal Login-->
+
+
+        <!-- Modal Forgot Password-->
+        <div class="modal fade" id="modalFpassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <!--modal-content-->
+            <div class="modal-content">
+
+              <div class="modal-content">
+                <div class="p-4">
+                  <div class="text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip"
+                      title="Fechar">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h1 class="h4 text-gray-900 mb-4"><strong>Esqueceu a sua password?</strong></h1>
+                    <p class="mb-4">Insira o seu username e o seu endereço de email e será enviada uma password de
+                      recuperação! </p>
+                    <hr>
+                  </div>
+                  <form class="form">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" id="usernameRecuperar"
+                        aria-describedby="usernameHelp" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control form-control-user" id="emailRecuperar"
+                        aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                  </form>
+
+                  <br> 
+
+                  <div class="text-center">
+                    <button id="recuperarSenha" class="btn-login">Recuperar senha</button>
+                    <br>
+                    <br>
+                    <hr>
+                    <p>Um serviço Secure4All</p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <!--Fim Modal Forgot Password-->
+
+      </nav><!-- #nav-menu-container -->
+    </div>
+
+  </header><!-- #header -->
+
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active">
+            <div class="carousel-background"><img src="img/intro-carousel/1.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>Polícia Marítima</h2>
+                <p>Descobre mais sobre nós, informa-te e mantém-te seguro</p>
+                <a href="#get-help" class="btn-get-started scrollto">Pedir Ajuda</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="img/intro-carousel/2.png" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>Polícia Marítima</h2>
+                <p>Descobre mais sobre nós, informa-te e mantém-te seguro</p>
+                <a href="#get-help" class="btn-get-started scrollto">Pedir Ajuda</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="img/intro-carousel/3.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>Polícia Marítima</h2>
+                <p>Descobre mais sobre nós, informa-te e mantém-te seguro</p>
+                <a href="#get-help" class="btn-get-started scrollto">Pedir Ajuda</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- #intro -->
+
+  <main id="main">
+
+
+
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="get-help" class="wow fadeIn">
+      <div class="container text-center">
+        <h3>Pedir Ajuda</h3>
+        <p> Necessita de ajuda? Registe aqui o seu pedido</p>
+        <button type="button" class="collapsible">Registar Pedido</button>
+        <div class="content">
+          <br>
+
+          <div class="container">
+            <form id="formNewPedidoAjuda" name="formNewPedidoAjuda" action="">
+
+              <div class="form-group blue-border">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" placeholder="" name="nome" required>
+              </div>
+
+              <div class="form-group">
+                <label for="id_entidade">Entidade:</label>
+                <select class="form-control" id="id_entidade" name="nomeEntidade">
+                </select>
+
+                <div class="form-group">
+                  <label for="email" class="control-label">Email:</label>
+                  <input type="text" class="form-control" id="email" name="email" data-rule="required|email">
+                </div>
+
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="distrito">Distrito:</label>
+                    <select class="form-control" name="distrito" id="district" data-rule="required|distrito"
+                      onchange="random()" required>
+                      <option value=""> --- </option>
+                      <option value="Aveiro"> Aveiro</option>
+                      <option value="Beja"> Beja</option>
+                      <option value="Braga"> Braga</option>
+                      <option value="Bragança"> Bragança</option>
+                      <option value="Castelo Branco"> Castelo Branco</option>
+                      <option value="Coimbra"> Coimbra</option>
+                      <option value="Évora"> Évora</option>
+                      <option value="Faro"> Faro</option>
+                      <option value="Guarda"> Guarda</option>
+                      <option value="Leiria"> Leiria</option>
+                      <option value="Lisboa"> Lisboa</option>
+                      <option value="Portalegre"> Portalegre</option>
+                      <option value="Porto"> Porto</option>
+                      <option value="Santarém"> Santarém</option>
+                      <option value="Setúbal"> Setúbal</option>
+                      <option value="Viana do Castelo"> Viana do Castelo</option>
+                      <option value="Vila Real"> Vila Real</option>
+                      <option value="Viseu"> Viseu</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="concelho">Concelho:</label>
+                    <select id="locations" class="form-control" name="concelho" data-rule="required|concelho">
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="morada">Morada:</label>
+                  <input type="text" class="form-control" id="morada" placeholder="Rua + Nrº da Porta" name="morada"
+                    required>
+                </div>
+
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="envolvidos">Nrº de Envolvidos:</label>
+                    <input type="number" min="1" max="500" step="1" class="form-control" id="envolvidos"
+                      placeholder="Digite o nrº ou selecione" name="envolvidos" required>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="id_subtipo_pedido">Sub-Tipo:</label>
+                    <select class="form-control" id="id_subtipo_pedido" name="id_subtipo_pedido"
+                      data-rule="required|subtipo" required>
+                      <option value="1"> Lazer </option>
+                      <option value="3"> Escolar </option>
+                      <option value="2"> Trabalho </option>
+                      <option value="4"> Indefinido </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="uname" class="control-label">Descrição:</label>
+                  <textarea id="descricaoPedido" class="form-control" name="descricaoPedido" rows="3"
+                    required></textarea>
+                </div>
+              </div>
+
+              <br>
+              <div class="container text-center">
+                <!--<input id="createbutton" type="submit" class="btn btn-primary mb-3" style="margin-left: 22px;"></input>
+            <input id="createbutton" type="reset" class="btn btn-primary mb-3"></input>-->
+                <button type="button" class="btn-sumbithelp" id="btnsubmeter">Submeter</button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+    </section><!-- #get-help -->
+
+
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Sobre Nós</h3>
+          <p>A Polícia Marítima, como polícia de especialidade no âmbito da AMN, e no quadro de matérias do Sistema da
+            Autoridade Marítima (SAM), é um órgão de polícia e de polícia criminal que garante, e fiscaliza, o
+            cumprimento das leis e regulamentos nos espaços integrantes do Domínio Público Marítimo (DPM), em áreas
+            portuárias e nos espaços balneares, bem como em todas as águas interiores sob jurisdição da AMN e demais
+            espaços marítimos sob soberania e jurisdição nacional, devendo preservar a regularidade das atividades
+            marítimas. Compete-lhe, ainda, nos termos da lei, e em colaboração com as demais forças policiais e de
+            segurança, garantir a segurança e os direitos dos cidadãos
+          </p>
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+              <div class="img">
+                <img src="img\missao.jpeg" alt="" class="img-fluid">
+                <div class="icon"><i class="material-icons">directions_boat</i></div>
+              </div>
+              <h2 class="title"><a href="#">Missão</a></h2>
+              <p>
+                A Polícia Maritíma é um órgão de polícia e de polícia criminal que garante, e fiscaliza, o cumprimento
+                das leis e regulamentos nos espaços integrantes do Domínio Público Marítimo, em áreas portuárias e nos
+                espaços balneares
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+              <div class="img">
+                <img src="img\competencias2.png" alt="" class="img-fluid">
+                <div class="icon"><i class="material-icons">description</i></div>
+              </div>
+              <h2 class="title"><a href="#">Competências</a></h2>
+              <p>
+                Compete à PM, como polícia de especialidade que exerce funções nos espaços de jurisdição da AMN,
+                executar ações de policiamento, fiscalização, vigilância e de investigação, bem como aplicar medidas de
+                polícia
+              </p>
+              <br>
+
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="img\valores.png" alt="" class="img-fluid">
+                <div class="icon"><i class="material-icons">fingerprint</i></div>
+              </div>
+              <h2 class="title"><a href="#">Valores</a></h2>
+              <p>
+                Como principais valores desta entidade destacamos a disciplina, o espiríto de equipa, o
+                profissionalismo, o empenho e a dedicação
+
+              </p>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+      <div class="container">
+
+        <header class="section-header wow fadeInUp">
+          <h3>Serviços</h3>
+        </header>
+        <br>
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="material-icons">pool</i></div>
+            <h4 class="title"><a>Resgate de Pessoas</a></h4>
+            <p class="description">Após recepção da emergência, e apuração da gravidade e localização da ocorrência as
+              unidades atuam automaticamente para um resgate rápido e seguro</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="material-icons">support</i></div>
+            <h4 class="title"><a>Afogamentos</a></h4>
+            <p class="description">Visto que os afogamentos são uma das principais causas de morte entre crianças e
+              jovens, tentamos eliminar ou minimizar as causas que poderão desencadear estes acidentes</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="material-icons">eco</i></div>
+            <h4 class="title"><a>Proteção Ambiental</a></h4>
+            <p class="description">A minimização do impacto ambiental desde sempre que tem sido uma preocupação da
+              organização, quer na concretização de novos projetos de limpeza dos mares quer na manutenção das diversas
+              infraestruturas de suporte à atividade praticada</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="icon"><i class="material-icons">pets</i></div>
+            <h4 class="title"><a>Resgate de Animais</a></h4>
+            <p class="description">Ao sermos informados da necessidade de um resgate animal, os nossos agentes treinados
+              e especializados, dirigem-se ao local onde o resgate é feito de forma rápida e nunca colocando a vida do
+              animal em risco</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="icon"><i class="material-icons">local_police</i></div>
+            <h4 class="title"><a>Apreensões</a></h4>
+            <p class="description">Temos conhecimento que o mar é a via mais comum para o transporte de drogas ou outros
+              produtos ilegais, deste modo, tentamos combater o mesmo, garantindo segurança à população que em nós
+              confia</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="icon"><i class="material-icons">landscape</i></div>
+            <h4 class="title"><a>Controlo e Segurança Costeira</a></h4>
+            <p class="description">Baseamo-nos em competências específicas de vigilância, patrulhamento e interceção
+              terrestre ou marítima,compete-nos ainda, gerir e operar o Sistema Integrado de Vigilância distribuído ao
+              longo da costa marítima</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Dados Section
+    ============================-->
+    <section id="facts" class="wow fadeIn">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Dados</h3>
+          <br>
+        </header>
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up" id="ocorrenciasUltimas"></span>
+            <p>ocorrências nas últimas 24h</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up" id="ocorrenciasAtivas"></span>
+            <p>Ocorrências Ativas</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up" id="ocorrenciasTotal"></span>
+            <p>Ocorrências Totais</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up" id="ocorrenciasCompletas"></span>
+            <p>Ocorrências Concluídas</p>
+          </div>
+
+
+        </div>
+
+      </div>
+      <br>
+    </section><!-- #dados -->
+
+
+    <!--==========================
+      Estatísticas Section
+    ============================-->
+
+    <section id="stats" class="wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header wow fadeInUp">
+          <h3>Estatísticas</h3>
+          <p>Veja mais algumas informações acerca das nossas atividades</p>
+        </header>
+        <hr>
+
+
+        <br>
+
+        <!--Chart-->
+        <!--Linha1-->
+        <div class="row align-items-center wow fadeInUp">
+
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="card1 shadow mb-4">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Número de ocorrências durante a última semana</h6>
+              </div>
+              <!-- Card Body -->
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="myAreaChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!--Linha2-->
+        <div class="row align-items-center wow fadeInUp">
+
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="card1 shadow mb-4">
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Visão Geral dos Pedidos</h6>
+              </div>
+              <div class="card-body">
+                <canvas id="myBarChart" style="width: 928px; height: 300px;"></canvas>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <br>
+        <br>
+
+      </div>
+    </section>
+    <!-- #stats -->
+    <!-- #stats -->
+
+
+    <!--==========================
+      Clients Section
+    ============================-->
+    <section id="clients" class="wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Conheça os nossos Parceiros</h3>
+        </header>
+
+        <div class="owl-carousel clients-carousel">
+
+          <img src="img/clients/client-1.png" alt="Secure4All" width="310" height="150">
+          <a href="https://www.uminho.pt/PT" target="_blank"><img src="img/clients/client-2.jpg"
+              alt="Universidade do Minho" width="310" height="150"></a>
+          <a href="https://iotech.pt/" target="_blank"><img src="img/clients/client-3.png" alt="ioTech" width="310"
+              height="150"></a>
+        </div>
+
+      </div>
+    </section><!-- #clients -->
+
+
+    <!--==========================
+      Team Section
+    ============================-->
+    <section id="team">
+      <div class="container">
+        <div class="section-header wow fadeInUp">
+          <h3>A nossa equipa</h3>
+          <br>
+          <br>
+        </div>
+
+        <!--Experiência para colocar as 7 fotos de todos os membros da equipa-->
+        <!--3fotos de baixo-->
+        <div class="row justify-content-md-center">
+
+          <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/ricardo3.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Ricardo Silva</h4>
+                  <span>Front-End</span>
+                  <span>A92948</span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/ruben2.jpeg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Rúben Faria</h4>
+                  <span>Full-Stack</span>
+                  <span>A92916</span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/catarinaSilva.jpeg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Catarina Silva</h4>
+                  <span>Back-End</span>
+                  <span>A92883</span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--4fotos de baixo-->
+        <div class="row justify-content-md-center">
+
+          <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/catarinaFerreira.jpeg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Catarina Ferreira</h4>
+                  <span>Front-End</span>
+                  <span>A92976</span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/mariana2.jpeg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Mariana Gomes</h4>
+                  <span>Back-End</span>
+                  <span>A92881</span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/anabelaMarin.JPG" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Anabela Marim</h4>
+                  <span>Front-End</span>
+                  <span>A92922</span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/carolinaNogueira.jpeg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Carolina Nogueira</h4>
+                  <span>Back-End</span>
+                  <span>A92979</span>
+                  <!--
+                  <div class="social">
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #team -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+          <h3>Entre em contacto connosco</h3>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="material-icons">place</i>
+              <h3>A nossa sede</h3>
+              <strong> Comando-geral da Polícia Marítima</strong>
+              <address>
+                Praça do Município
+                <br>
+                1149-001 Lisboa
+              </address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="material-icons">phone_in_talk</i>
+              <h3>Telefone</h3>
+              <strong> Comando Viana do Castelo</strong>
+              <p><a href="tel:+112 258 822 168 "> +112 258 822 168 </a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="material-icons">email</i>
+              <h3>Email</h3>
+              <strong> Comando-geral da Polícia Marítima</strong>
+              <p><a href="mailto:policiamaritima@amn.pt">policiamaritima@amn.pt</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <!--Google Map-->
+        <div class="embed-responsive embed-responsive-21by9">
+          <iframe class="embed-responsive-item"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.519434069304!2d-8.839724384604247!3d41.687721079237726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd25c9d8163c3625%3A0x6b268cf361a688e2!2zUG9sw61jaWEgTWFyw610aW1h!5e0!3m2!1spt-PT!2spt!4v1604831974485!5m2!1spt-PT!2spt"
+            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <!-- width="1100" height="300" -->
+          <!-- <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyACkUVyBtXuhwC9DEF5k9ePdmXamdT7xTo&q=M5Q6+3X" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>Polícia Marítima</h3>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Mais informações</h4>
+            <ul>
+              <li><i class="ion-ios-arrow-right"></i> <a href="..\FrontOffice\FAQ´s\index.html"> FAQ´s</a>
+              <li><i class="ion-ios-arrow-right"></i><a class="video-btn" data-toggle="modal"
+                  data-src="https://www.youtube-nocookie.com/embed/3j_Y4f4-GHA?controls=0" data-target="#videoModal"
+                  href="#">Vídeo</a></li>
+
+            </ul>
+
+            <!--Video Modal-->
+            <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe width="560" height="315" class="embed-responsive-item" src="" id="video"
+                        allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!--Fim do Modal-->
+
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Polícia Marítima </h4>
+            <p>
+              A Polícia Marítima é um órgão que garante e fiscaliza o cumprimento das leis e regulamentos nos espaços
+              integrantes do Domínio Público Marítimo, áreas portuárias, espaços balneares, águas interiores sob
+              jurisdição da AMN e demais espaços marítimos
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Polícia Marítima</strong>. Um serviço Secure4All
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+
+  <!-- Page level custom scripts -->
+  <!--<script src="D311/D311/frontend/BackOffice/js/demo/chart-area-demo.js"></script>
+  <script src="D311/D311/frontend/BackOffice/js/demo/chart-bar-demo copy.js"></script>-->
+
+  <!--<script defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACkUVyBtXuhwC9DEF5k9ePdmXamdT7xTo&callback=initMap">
+  </script>-->
+
+  <!-- controller -->
+  <script src="./Controller/front_office.controller.js"></script>
+  <!--
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  -->
+
+  <script>
+    //Funçao dos distritos
+    function random() {
+
+      var a = document.getElementById('district').value;
+      console.log(a);
+      //console.log(a);
+      //console.log(b);
+
+      //var visibleId = $('.sect:visible').prop('id');
+      //console.log(visibleId);
+
+      if (a === 'Aveiro') {
+
+        var array = ["Águeda", "Albergaria-a-Velha", "Anadia", "Arouca", "Aveiro", "Castelo de Paiva", "Espinho", "Estarreja", "Ílhavo", "Mealhada", "Murtosa", "Oliveira de Azeméis", "Oliveira do Bairro", "Ovar", "Santa Maria da Feira", "São João da Madeira", "Sever do Vouga", "Vagos", "Vale de Cambra"];
+
+      }
+
+      else if (a === 'Beja') {
+        var array = ["Aljustrel", "Almodôvar", "Alvito", "Aljustrel", "Almodôvar", "Alvito", "Barrancos", "Beja", "Castro Verde", "Cuba", "Ferreira do Alentejo", "Mértola", "Moura", "Odemira", "Ourique", "Serpa", "Vidigueira"];
+
+      }
+
+      else if (a === 'Braga') {
+        var array = ["Amares", "Barcelos", "Braga", "Cabeceiras de Basto", "Celorico de Basto", "Esposende", "Fafe", "Guimarães", "Póvoa de Lanhoso", "Terras de Bouro", "Vieira do Minho", "Vila Nova de Famalicão", "Vila Verde", "Vizela"];
+
+      }
+
+      else if (a === 'Bragança') {
+
+        var array = ["Alfandega da Fé", "Bragança", "Carrazeda de Ansiães", "Freixo Espada à Cinta", "Macedo de Cavaleiros", "Miranda do Douro", "Mirandela", "Mogadouro", "Torre de Moncorvo", "Vila Flor", "Vimioso", "Vinhais"];
+      }
+
+      else if (a === 'Castelo Branco') {
+
+        var array = ["Belmonte", "Castelo Branco", "Covilhã", "Fundão", "Idanha-a-Nova", "Oleiros", "Penamacor", "Penhas Saúde", "Proença-a-Nova", "Sertã", "Vila de Rei", "Vila Velha de Rodão"];
+
+      }
+
+      else if (a === 'Coimbra') {
+
+        var array = ["Arganil", "Cantanhede", "Coimbra", "Condeixa-a-Nova", "Figueira da Foz", "Góis", "Lousã", "Mira", "Miranda do Corvo", "Montemor-o-Velho", "Oliveira do Hospital", "Pampilhosa da Serra", "Penela", "Soure", "Tábua", "Vila Nova de Poiares"];
+      }
+
+      else if (a === 'Évora') {
+
+        var array = ["Alandroal", "Arraiolos", "Borba", "Estremoz", "Évora", "Montemor-o-Novo", "Mora", "Mourão", "Portel", "Redondo", "Reguengos de Monsaraz", "Vendas Novas", "Viana do Alentejo", "Vila Viçosa"];
+
+      }
+
+      else if (a === 'Faro') {
+
+        var array = ["Albufeira", "Alcoutim", "Aljezur", "Castro Marim", "Faro", "Lagoa", "Lagos", "Loulé", "Monchique", "Olhão", "Portimão", "Sagres", "São Brás de Alportel", "Silves", "Tavira", "Vila do Bispo", "Vila Real de Santo António"];
+
+      }
+
+      else if (a === 'Guarda') {
+
+        var array = ["Aguiar da Beira", "Almeida", "Celorico da Beira", "Figueira de Castelo Rodrigo", "Fornos de Algodres", "Gouveia", "Guarda", "Manteigas", "Mêda", "Penhas Douradas", "Pinhel", "Sabugal", "Seia", "Trancoso", "Vila Nova de Foz Coa"];
+
+
+      }
+
+      else if (a === 'Leiria') {
+
+        var array = ["Alcobaça", "Alvaiázere", "Ansião", "Batalha", "Bombarral", "Caldas da Rainha", "Castanheira de Pêra", "Figueiró dos Vinhos", "Leiria", "Marinha Grande", "Nazaré", "Óbidos", "Pedrógão Grande", "Peniche", "Pombal", "Porto de Mós"];
+
+
+      }
+
+      else if (a === 'Lisboa') {
+
+        var array = ["Alenquer", "Amadora", "Arruda dos Vinhos", "Azambuja", "Cadaval", "Cascais", "Lisboa", "Loures", "Lourinhã", "Mafra", "Odivelas", "Oeiras", "Sintra", "Sobral de Monte Agraço", "Torres Vedras", "Vila Franca de Xira"];
+
+      }
+
+      else if (a === 'Portalegre') {
+
+        var array = ["Alter do Chão", "Arronches", "Avis", "Campo Maior", "Castelo de Vide", "Crato", "Elvas", "Fronteira", "Gavião", "Marvão", "Monforte", "Nisa", "Ponte de Sor", "Portalegre", "Sousel"];
+
+      }
+
+      else if (a === 'Porto') {
+
+        var array = ["Amarante", "Baião", "Felgueiras", "Gondomar", "Lousada", "Maia", "Marco de Canaveses", "Matosinhos", "Paços de Ferreira", "Paredes", "Penafiel", "Porto", "Póvoa de Varzim", "Santo Tirso", "Trofa", "Valongo", "Vila do Conde", "Vila Nova de Gaia"];
+
+      }
+
+      else if (a === 'Santarém') {
+
+        var array = ["Abrantes", "Alcanena", "Almeirim", "Alpiarça", "Benavente", "Cartaxo", "Chamusca", "Constância", "Coruche", "Entroncamento", "Ferreira do Zêzere", "Golegã", "Mação", "Ourém", "Rio Maior", "Salvaterra de Magos", "Santarém", "Sardoal", "Tomar", "Torres Novas", "Vila Nova da Barquinha"];
+
+      }
+
+      else if (a === 'Setúbal') {
+
+        var array = ["Alcácer do Sal", "Alcochete", "Almada", "Barreiro", "Grândola", "Moita", "Palmela", "Santiago do Cacém", "Seixal", "Sesimbra", "Setúbal", "Sines"];
+
+      }
+
+      else if (a === 'Viana do Castelo') {
+
+        var array = ["Arcos de Valdevez", "Caminha", "Melgaço", "Monção", "Paredes de Coura", "Ponte de Barca", "Ponte de Lima", "Valença", "Viana do Castelo", "Vila Nova de Cerveira"];
+
+      }
+
+      else if (a === 'Vila Real') {
+
+        var array = ["Alijó", "Boticas", "Chaves", "Mesão Frio", "Mondim de Basto", "Montalegre", "Murça", "Peso da Régua", "Ribeira de Pena", "Sabrosa", "Santa Marta de Penaguião", "Valpaços", "Vila Pouca de Aguiar", "Vila Real"];
+
+      }
+
+      else if (a === 'Viseu') {
+
+        var array = ["Armamar", "Carregal do Sal", "Castro Daire", "Cinfães", "Lamego", "Mangualde", "Mortágua", "Moimenta da Beira", "Nelas", "Oliveira de Frades", "Penalva do Castelo", "Penedono", "Resende", "Santa Comba Dão", "Sátão", "S. João da Pesqueira", "S. Pedro do Sul", "Sernancelhe", "Tabuaço", "Tarouca", "Tondela", "Vila Nova de Paiva", "Viseu", "Vouzela"];
+
+      }
+
+      else {
+        var array = [];
+      }
+
+      var string = "";
+
+      for (i = 0; i < array.length; i++) {
+        string = string + "<option>" + array[i] + "</option>";
+      }
+
+      document.getElementById('locations').innerHTML = string;
+    }
+//Fim da funçao dos distritos
+  </script>
+
+</body>
+
+</html>

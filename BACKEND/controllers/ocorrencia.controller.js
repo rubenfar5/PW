@@ -2156,25 +2156,25 @@ function finalizarOcorrencia(req, res) {
                                     let distrito;
                                     let concelho;
 
-    let query_seis = "SELECT L.morada, L.distrito, L.concelho FROM localizacao L, ocorrencia O WHERE L.id_local=O.id_local AND O.id_ocorrencia=?";
+                                    let query_seis = "SELECT L.morada, L.distrito, L.concelho FROM localizacao L, ocorrencia O WHERE L.id_local=O.id_local AND O.id_ocorrencia=?";
 
-    bd.con.query(query_seis, alterar,
-        function (err, rows, fields) {
-            if (err) {
-                console.log(err);
-                res.status(jsonMessages.db.dbError.status).send(jsonMessages.db.dbError);
-            }
-            else {
-                if (rows.length == 0) {
-                    res.status(jsonMessages.db.noRecords.status).send(jsonMessages.db.noRecords);
-                }
-                else {
-                    morada = rows[0].morada;
-                    distrito = rows[0].distrito;
-                    concelho = rows[0].concelho;
-                }
-            }
-        });
+                                    bd.con.query(query_seis, alterar,
+                                        function (err, rows, fields) {
+                                            if (err) {
+                                                console.log(err);
+                                                res.status(jsonMessages.db.dbError.status).send(jsonMessages.db.dbError);
+                                            }
+                                            else {
+                                                if (rows.length == 0) {
+                                                    res.status(jsonMessages.db.noRecords.status).send(jsonMessages.db.noRecords);
+                                                }
+                                                else {
+                                                    morada = rows[0].morada;
+                                                    distrito = rows[0].distrito;
+                                                    concelho = rows[0].concelho;
+                                                }
+                                            }
+                                        });
 
 
 
@@ -2255,7 +2255,7 @@ function finalizarOcorrencia(req, res) {
                                                                                     to: email_gestor,
                                                                                     cc: '<pw.policiamaritima@gmail.com>',
                                                                                     subject: 'Ocorrência concluída - DETALHES',
-                                                                                    text: "Caro Gestor, " + nome_gestor + '\n' + '\n' + "A sua ocorrência com id " + id + " que ocorreu no distrito de " + distrito + ", " + "no concelho de " + concelho + ", "+ "na morada " + morada + " foi concluída com sucesso." + '\n\ ' + '\n\ ' + "Detalhes: " + '\n' + "Distância ao centro de operações: " + distancia + " Km " + '\n' + "Custo da ocorrência: " + custoTotal + " €" + '\n' + "Duração da ocorência: " + tempoMinimo + " minutos" + '\n' + '\n ' + "Cumprimentos, PM",
+                                                                                    text: "Caro Gestor, " + nome_gestor + '\n' + '\n' + "A sua ocorrência com id " + id + " que ocorreu no distrito de " + distrito + ", " + "no concelho de " + concelho + ", " + "na morada " + morada + " foi concluída com sucesso." + '\n\ ' + '\n\ ' + "Detalhes: " + '\n' + "Distância ao centro de operações: " + distancia + " Km " + '\n' + "Custo da ocorrência: " + custoTotal + " €" + '\n' + "Duração da ocorência: " + tempoMinimo + " minutos" + '\n' + '\n ' + "Cumprimentos, PM",
 
                                                                                 };
 
@@ -2299,10 +2299,6 @@ function finalizarOcorrencia(req, res) {
             }
         })
 };
-
-
-
-
 
 
 

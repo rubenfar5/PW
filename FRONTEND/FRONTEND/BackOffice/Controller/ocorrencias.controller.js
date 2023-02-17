@@ -649,42 +649,6 @@ function verOcorrenciasNaoConluídas() {
 
             });
 
-            /*
-                        $('#concluirOcorrencia').click(function () {
-                            swal.fire({
-                                icon: "warning",
-                                title: "Concluir",
-                                text: "Deseja concluir a ocorrência: " + id_ocorrencia + " ?",
-                                showCancelButton: true,
-                                confirmButtonText: 'Sim, concluir!',
-                                cancelButtonText: "Cancelar",
-                                showLoaderOnConfirm: true,
-                                preConfirm: () => {
-                                    fetch('http://127.0.0.1:3000/occurrences/' + id_ocorrencia + '/finish/', {
-                                        headers: { 'Content-Type': 'application/json' },
-                                        method: 'PUT',
-                                    })
-                                        .then(res => res.json())
-                                        .then((out) => {
-                                            swal.fire({
-                                                icon: "success",
-                                                title: "Sucesso",
-                                                text: "Ocorrência concluída com sucesso"
-                                            })
-                                                .then(function () {
-                                                    window.location.href = "./gerirOcorrências.html";
-                                                })
-                                        })
-            
-                                        .catch(error => {
-                                            console.log(error);
-                                        })
-                                },
-                                allowOutsideClick: () => !swal.isLoading()
-                            })
-                        })
-            
-            */
             $('#notificarGestor').click(function () {
                 if (gestor == null) {
                     swal.fire({
@@ -1363,42 +1327,6 @@ function verOcorrencias() {
 
             });
 
-            /*
-                        $('#concluirOcorrencia').click(function () {
-                            swal.fire({
-                                icon: "warning",
-                                title: "Concluir",
-                                text: "Deseja concluir a ocorrência: " + id_ocorrencia + " ?",
-                                showCancelButton: true,
-                                confirmButtonText: 'Sim, concluir!',
-                                cancelButtonText: "Cancelar",
-                                showLoaderOnConfirm: true,
-                                preConfirm: () => {
-                                    fetch('http://127.0.0.1:3000/occurrences/' + id_ocorrencia + '/finish/', {
-                                        headers: { 'Content-Type': 'application/json' },
-                                        method: 'PUT',
-                                    })
-                                        .then(res => res.json())
-                                        .then((out) => {
-                                            swal.fire({
-                                                icon: "success",
-                                                title: "Sucesso",
-                                                text: "Ocorrência concluída com sucesso"
-                                            })
-                                                .then(function () {
-                                                    window.location.href = "./gerirOcorrências.html";
-                                                })
-                                        })
-            
-                                        .catch(error => {
-                                            console.log(error);
-                                        })
-                                },
-                                allowOutsideClick: () => !swal.isLoading()
-                            })
-                        })
-            
-            */
             $('#notificarGestor').click(function () {
                 if (gestor == null) {
                     swal.fire({
